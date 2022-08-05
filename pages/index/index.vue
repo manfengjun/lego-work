@@ -1,19 +1,27 @@
 <template>
 	<view class="box">
-		<u-tabs class="tab-box" :list="week" @click="click"></u-tabs>
-		<uni-card spacing="0" padding="0">
+		<u-tabs class="tab-box" :list="weeks" @click="click"></u-tabs>
+		<uni-card spacing="0" padding="0" v-for="(week, index) in weeks" :key="index">
 			<u-collapse @change="change" @close="close" @open="open">
-				<u-collapse-item title="6岁 17:50 班级" name="Docs guide">
-					<u-cell-group>
-					    <u-cell
-					        title="单元格"
-					    	isLink
-					    >
-					    	<text
-					    	    slot="value"
-					    	    class="u-slot-value"
-					    	>99</text>
-					    </u-cell>
+				<u-collapse-item
+					:title="item.time"
+					name="Docs guide"
+					v-for="(item, index) in week.class"
+					:key="index"
+				>
+					<u-cell-group :border="false">
+						<text v-for="(student, index) in item.students" :key="index">sdfs</text>
+						<!-- <u-cell
+							title="单元格"
+							:border="false"
+							v-for="(student, index) in item.students"
+							:key="index"
+						>
+							<view class="cell-menu" slot="value">
+								<u-button class="menu-send" text="发送"></u-button>
+								<u-button class="menu-edit" text="编辑"></u-button>
+							</view>
+						</u-cell> -->
 					</u-cell-group>
 				</u-collapse-item>
 			</u-collapse>
@@ -22,29 +30,12 @@
 </template>
 
 <script>
+import weeks from '../data/student.json';
+
 export default {
 	data() {
 		return {
-			week: [
-				{
-					name: '周二'
-				},
-				{
-					name: '周三'
-				},
-				{
-					name: '周四'
-				},
-				{
-					name: '周五'
-				},
-				{
-					name: '周六'
-				},
-				{
-					name: '周日'
-				}
-			]
+			weeks: weeks
 		};
 	},
 	methods: {
@@ -69,6 +60,26 @@ export default {
 		justify-content: center;
 		align-items: center;
 		background-color: #fff;
+	}
+	/deep/ .u-collapse-item__content__text {
+		padding: 0 0 !important;
+	}
+	.cell-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		.u-button {
+			width: 100rpx;
+			height: 60rpx;
+			margin-left: 20rpx;
+			color: #fff;
+		}
+		.menu-send {
+			background-color: #e67470;
+		}
+		.menu-edit {
+			background-color: #f0b054;
+		}
 	}
 }
 </style>
