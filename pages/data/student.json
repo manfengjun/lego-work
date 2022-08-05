@@ -1,20 +1,4 @@
 [{
-	"week": 1,
-	"name": "周一",
-	"class": [{
-		"teacher": "君君老师",
-		"time": "下午 17:50",
-		"room": "第二教室",
-		"course": "",
-		"students": []
-	}, {
-		"teacher": "君君老师",
-		"time": "下午 19:20",
-		"room": "第二教室",
-		"course": "",
-		"students": []
-	}]
-}, {
 	"week": 2,
 	"name": "周二",
 	"class": [{
