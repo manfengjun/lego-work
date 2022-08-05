@@ -1,14 +1,23 @@
 <template>
 	<view class="box">
-		<u-cell-group>
-			<u-cell icon="clock" title="周一" isLink url="/pages/index/class?week=1"></u-cell>
-			<u-cell icon="clock" title="周二" isLink url="/pages/index/class?week=2"></u-cell>
-			<u-cell icon="clock" title="周三" isLink url="/pages/index/class?week=3"></u-cell>
-			<u-cell icon="clock" title="周四" isLink url="/pages/index/class?week=4"></u-cell>
-			<u-cell icon="clock" title="周五" isLink url="/pages/index/class?week=5"></u-cell>
-			<u-cell icon="clock" title="周六" isLink url="/pages/index/class?week=6"></u-cell>
-			<u-cell icon="clock" title="周日" isLink url="/pages/index/class?week=0"></u-cell>
-		</u-cell-group>
+		<u-tabs class="tab-box" :list="week" @click="click"></u-tabs>
+		<uni-card spacing="0" padding="0">
+			<u-collapse @change="change" @close="close" @open="open">
+				<u-collapse-item title="6岁 17:50 班级" name="Docs guide">
+					<u-cell-group>
+					    <u-cell
+					        title="单元格"
+					    	isLink
+					    >
+					    	<text
+					    	    slot="value"
+					    	    class="u-slot-value"
+					    	>99</text>
+					    </u-cell>
+					</u-cell-group>
+				</u-collapse-item>
+			</u-collapse>
+		</uni-card>
 	</view>
 </template>
 
@@ -16,11 +25,50 @@
 export default {
 	data() {
 		return {
-			href: 'https://uniapp.dcloud.io/component/README?id=uniui'
+			week: [
+				{
+					name: '周二'
+				},
+				{
+					name: '周三'
+				},
+				{
+					name: '周四'
+				},
+				{
+					name: '周五'
+				},
+				{
+					name: '周六'
+				},
+				{
+					name: '周日'
+				}
+			]
 		};
 	},
-	methods: {}
+	methods: {
+		open(e) {
+			// console.log('open', e)
+		},
+		close(e) {
+			// console.log('close', e)
+		},
+		change(e) {
+			// console.log('change', e)
+		}
+	}
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.box {
+	/deep/ .u-tabs {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: #fff;
+	}
+}
+</style>
