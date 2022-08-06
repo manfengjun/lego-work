@@ -238,11 +238,13 @@
 		"students": [{
 			"name": "江乔桉",
 			"petName": "乔桉",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}, {
 			"name": "张彦博",
 			"petName": "彦博",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}, {
@@ -253,6 +255,7 @@
 		}, {
 			"name": "张钧智",
 			"petName": "钧智",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}]
@@ -285,6 +288,7 @@
 		}, {
 			"name": "Sara",
 			"petName": "Sara",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}, {
@@ -295,6 +299,7 @@
 		}, {
 			"name": "汤普森",
 			"petName": "普森",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}, {
@@ -305,6 +310,7 @@
 		}, {
 			"name": "李京鸿",
 			"petName": "京鸿",
+			"parent": "爸爸",
 			"age": 6,
 			"level": 6
 		}]

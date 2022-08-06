@@ -26,11 +26,11 @@
   color: #fff !important;
   border-radius: 30rpx !important;
 }
-.box .cell-menu .u-button:first-child {
+.box .cell-menu .menu-button:first-child .u-button {
   margin: 0;
   background-color: #e67470 !important;
 }
-.box .cell-menu .u-button:last-child {
+.box .cell-menu .menu-button:last-child .u-button {
   background-color: #f0b054 !important;
 }
 .box .u-popup__content {
