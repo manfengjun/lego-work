@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "Work",
+  "usingComponents": {
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "u--text": "/uni_modules/uview-ui/components/u--text/u--text",
+    "uni-card": "/uni_modules/uni-card/components/uni-card/uni-card",
+    "u-cell-group": "/uni_modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/uni_modules/uview-ui/components/u-cell/u-cell",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup"
+  }
+}
